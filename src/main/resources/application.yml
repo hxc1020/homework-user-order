@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/user_order?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    name: user_order
+    username: root
+    password: 111111
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      connection-test-query: SELECT 1
+feign:
+  client:
+    config:
+      shop-order:
+        url: http://localhost:1080/api
+
